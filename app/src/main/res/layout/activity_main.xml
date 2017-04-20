@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="bottom"
+        android:padding="10dp"
+        android:layout_marginBottom="-200dp">
+        <include
+            android:id="@+id/first_item"
+            layout="@layout/item_horizon" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_below="@+id/first_item"
+            android:clipChildren="false"
+            android:layoutAnimation="@anim/rv_layout_animation"
+            android:overScrollMode="never"
+            />
+    </RelativeLayout>
+
+</FrameLayout>
